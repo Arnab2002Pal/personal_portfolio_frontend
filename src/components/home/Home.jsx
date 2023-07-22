@@ -23,6 +23,7 @@ import { MouseOutlined } from '@mui/icons-material'
 
 const Home = ({timelines , skills}) => {
 
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let scrollY = window.scrollY;

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { MdTimeline } from "react-icons/md";
 import { AiOutlineProject } from "react-icons/ai";
 import { useDispatch, useSelector } from 'react-redux';
-import {login, logout, updateUser} from '../../actions/user'
+import { logout, updateUser} from '../../actions/user'
 import { useAlert } from 'react-alert';
 
 

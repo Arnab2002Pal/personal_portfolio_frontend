@@ -8,7 +8,7 @@ export const getUser = () =>async (dispatch) =>{
             type: "GET_USER_REQUEST"
         })
 
-        const {data} = await axios.get("/api/v1/user")
+        const {data} = await axios.get("https://portfolio-backend-k8o9.onrender.com/api/v1/user")
 
         dispatch({
             type: "GET_USER_SUCCESS",
@@ -34,7 +34,7 @@ export const login = (email, password) =>async (dispatch) =>{
             type: "LOGIN_REQUEST"
         })
 
-        const {data} = await axios.post("/api/v1/login",{
+        const {data} = await axios.post("https://portfolio-backend-k8o9.onrender.com/api/v1/login",{
             email,
             password
         },
@@ -71,7 +71,7 @@ export const logout = () =>async (dispatch) =>{
             type: "LOGOUT_REQUEST"
         })
 
-        const {data} = await axios.get("/api/v1/logout")
+        const {data} = await axios.get("https://portfolio-backend-k8o9.onrender.com/api/v1/logout")
 
         dispatch({
             type: "LOGOUT_SUCCESS",
@@ -98,7 +98,7 @@ export const loadUser = () =>async (dispatch) =>{
             type: "LOAD_USER_REQUEST"
         })
 
-        const {data} = await axios.get("/api/v1/me")
+        const {data} = await axios.get("https://portfolio-backend-k8o9.onrender.com/api/v1/me")
 
         dispatch({
             type: "LOAD_USER_SUCCESS",
@@ -125,7 +125,7 @@ export const updateUser = (name, email,password,skills,about) =>async (dispatch)
             type: "UPDATE_USER_REQUEST"
         })
 
-        const {data} = await axios.put("/api/v1/admin/update",{
+        const {data} = await axios.put("https://portfolio-backend-k8o9.onrender.com/api/v1/admin/update",{
             name, 
             email,
             password,
@@ -163,7 +163,7 @@ export const addTimeline = (title, description , date) =>async (dispatch) =>{
             type: "ADD_TIMELINE_REQUEST"
         })
 
-        const {data} = await axios.post("/api/v1/admin/timeline/add",{
+        const {data} = await axios.post("https://portfolio-backend-k8o9.onrender.com/api/v1/admin/timeline/add",{
             title, 
             description , 
             date
@@ -198,7 +198,7 @@ export const DeleteTimeline = (id) =>async (dispatch) =>{
             type: "DELETE_TIMELINE_REQUEST"
         })
 
-        const {data} = await axios.delete(`/api/v1/admin/timeline/${id}`)
+        const {data} = await axios.delete(`https://portfolio-backend-k8o9.onrender.com/api/v1/admin/timeline/${id}`)
 
         dispatch({
             type: "DELETE_TIMELINE_SUCCESS",
@@ -223,7 +223,7 @@ export const addProject = (title, url, image , description , techStack) => async
       });
   
       const { data } = await axios.post(
-        "/api/v1/admin/project/add",
+        "https://portfolio-backend-k8o9.onrender.com/api/v1/admin/project/add",
         {   
             title, 
             url, 
@@ -256,7 +256,7 @@ export const addProject = (title, url, image , description , techStack) => async
         type: "DELETE_PROJECT_REQUEST",
       });
   
-      const { data } = await axios.delete(`/api/v1/admin/project/${id}`);
+      const { data } = await axios.delete(`https://portfolio-backend-k8o9.onrender.com/api/v1/admin/project/${id}`);
   
       dispatch({
         type: "DELETE_PROJECT_SUCCESS",
@@ -279,7 +279,7 @@ export const addProject = (title, url, image , description , techStack) => async
       });
   
       const { data } = await axios.post(
-        "/api/v1/contact",
+        "https://portfolio-backend-k8o9.onrender.com/api/v1/contact",
         {   
             name , email, message
         },
