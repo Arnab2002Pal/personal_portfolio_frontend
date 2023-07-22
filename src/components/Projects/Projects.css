@@ -1,0 +1,161 @@
+.projects{
+    background-color: hsl(219, 48%, 8%);
+    min-height: 100vh;
+    padding-top: 15vmax;
+    padding-bottom: 15vmax;
+}
+
+.projects > h3{
+    text-align: center;
+    color: white;
+    position: absolute;
+    background-color: rgb(75, 143, 220);
+    padding: 1.5vmax 6vmax;
+    display: flex;
+    border-radius: 100px 20px 20px 100px;
+    align-items: center;
+    right: -10%;
+    transform: translate(-50% , -100vh);
+    animation: projectHeadingAnimation 1s ease-in-out forwards;
+}
+
+.projects > h3:last-child{
+    /* right:-25%; */
+    border-radius: 20px 100px 100px 20px;
+}
+
+.projects > h3 > svg {
+    margin: 1vmax;
+}
+
+
+.projectsWrapper {
+    border-top: 100px solid white;
+    border-radius: 300px 0 0 300px;
+    min-height: inherit;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vmax;
+    padding-bottom: 10vmax;
+    
+    overflow-x: hidden;
+}
+
+.projectCard{
+    width: 80%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+    margin: 2vmax;
+    border-radius: 10px;
+    display: flex;
+    transform: translateX(-100vw);
+    animation: projectCardAnimation 1s ease-in-out forwards 1s;
+}
+
+.projectCard:nth-child(even){
+    flex-direction: row-reverse;
+    transform: translateX(100vw);
+    animation: projectCardAnimation 1s ease-in-out forwards 1s;
+}
+
+
+.projectCard > div {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+    justify-content: space-around;
+}
+
+/* .projectCard > div:first-child {
+    border-left: 5px solid black;
+} */
+
+/* .projectCard > div:first-child::after{
+    content: "VIEW DEMO";
+    width: 100%;
+    height: 100%;
+    font: 100 2rem "Roboto";
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+} */
+
+.projectCard > div:first-child > h5{
+    text-align: center;
+    padding: 2vmax;
+
+}
+
+.projectCard > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 2vmax 3vmax;
+    margin-bottom: 11%;
+
+
+}
+
+.projectCard > div:last-child > h4{
+    text-align: center;
+    
+}
+
+.projectCard > div:last-child > p {
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.projectCard > div:last-child > h6 {
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.projectCard > div > img{
+    width: inherit;
+}
+
+.projectCard:hover div:first-child{
+    scale: 0.99;
+}
+
+
+@keyframes projectCardAnimation {
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes projectHeadingAnimation {
+    to{
+        transform: translate(-50% , -50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projectCard{
+        flex-direction: column;
+    }
+
+    .projectCard > div {
+        justify-content: center;
+    }
+
+    .projectCard > div:last-child > p {
+        text-align: center;
+    }
+
+    .projectCard:nth-child(even){
+        flex-direction: column;
+    }
+}

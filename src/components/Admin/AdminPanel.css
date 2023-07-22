@@ -1,0 +1,187 @@
+.adminPanel{
+    width: 100%;
+    min-width: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.adminPanelContainer{
+    
+    padding-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    background-color: #f1f1f1;  
+    border-radius: 0 0 120px 120px;
+}
+
+.adminPanelContainer > h4{
+    margin: 2vmax;
+    letter-spacing: 15px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.adminPanelContainer > h4 > p{
+    transition: all 0.5s;
+
+}
+
+.adminPanelContainer > h4 > p:hover{
+    transform: translateY(-10px);
+}
+
+.adminPanelContainer > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:  4vmax ;
+    padding-top: 0;
+}
+
+.adminPanelInputs{
+    width: 50%;
+    padding: 1vmax 2vmax;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font: 100 1rem "Ysabeau" , sans-serif;
+    outline: none;
+    margin: 2vmax;
+    box-sizing: border-box;
+}
+
+.adminPanelSkill{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminPanelSkill > div{
+    display: flex;
+    align-items: center;
+    margin: 2vmax;
+
+}
+
+.adminPanelSkill > div > p{
+    font: 500 1.5rem "Roboto", sans-serif;
+    margin-right: 2vmax;
+    text-transform: uppercase;
+    color: rgba(24, 24, 24, 0.815);
+}
+
+.adminPanelFileUpload::-webkit-file-upload-button{
+    width: 100%;
+    border-radius: 30px;
+    padding: 1vmax;
+    /* color: white; */
+}
+
+.adminPanelFileUpload::-webkit-file-upload-button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.adminPanelAbout > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid white;
+    border-radius: 0 0 40px 40px;
+    margin: 2vmax 0;
+    padding-bottom: 3vmax;
+}
+
+.adminPanelAbout {
+    width: 100%;
+}
+
+.adminPanelAbout > fieldset > legend{
+    margin: 2vmax 4vmax;
+    padding: 0 1vmax;
+    font: 500 2rem "Roboto";
+}
+
+.adminPanelContainer > form > a {
+    background-color: #fafafa;
+    padding: 1.5vmax 2vmax;
+    font: 400 1.7rem "Roboto", sans-serif;
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: space-evenly;
+    width: 220px;
+    margin: 1.5vmax;
+    transition: all 0.5s;
+}
+
+.adminPanelContainer > form > a:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.212);
+    transform: scale(0.9);
+}
+
+.adminPanelContainer > form > button {
+    width: 100%;
+    padding: 1vmax;
+    margin: 2vmax;
+    background-color: hsl(219 , 48% , 8%);
+}
+
+.adminPanelTimelime {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.adminPanelTimelime > .card {
+    width: 300px;
+  transition: all 0.5s;
+  padding: 1vmax;
+  margin: 2vmax;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminPanelTimelime > .card > a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+    width: inherit;
+}
+
+.adminPanelTimelime > .card img {
+    width: inherit;
+}
+  
+.adminPanelTimelime > .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+}
+
+.adminPanelProject > .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+@media screen and (max-width: 600px) {
+    .card {
+      width: 200px;
+    }
+}
